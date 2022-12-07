@@ -42,4 +42,9 @@ public class TenantController {
         return Results.success(this.tenantService.save(tenant));
     }
 
+    @DeleteMapping
+    public ResponseEntity<Boolean> delete(Long tenantId) {
+        return Results.success(this.tenantService.removeById(tenantId));
+    }
+
 }

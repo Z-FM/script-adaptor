@@ -2,6 +2,8 @@ package com.zfm.scriptadaptor.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
@@ -9,6 +11,7 @@ import java.time.LocalDateTime;
  * @Description: .
  * @Author: feiming.zhang@going-link.com.
  */
+@Data
 public abstract class BaseDomain {
     public static final String FIELD_CREATION_DATE = "creationDate";
     public static final String FIELD_CREATED_BY = "createdBy";
@@ -31,6 +34,7 @@ public abstract class BaseDomain {
     /**
      * 状态（1:正常；0:删除）
      */
+    @TableLogic
     private int status;
 
 }
