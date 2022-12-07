@@ -1,0 +1,36 @@
+package com.zfm.scriptadaptor.domain.entity;
+
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+
+import java.time.LocalDateTime;
+
+/**
+ * @Description: .
+ * @Author: feiming.zhang@going-link.com.
+ */
+public abstract class BaseDomain {
+    public static final String FIELD_CREATION_DATE = "creationDate";
+    public static final String FIELD_CREATED_BY = "createdBy";
+    public static final String FIELD_LAST_UPDATE_DATE = "lastUpdateDate";
+    public static final String FIELD_LAST_UPDATED_BY = "lastUpdatedBy";
+    public static final String FIELD_OBJECT_VERSION_NUMBER = "objectVersionNumber";
+    public static final String FIELD_STATUS = "status";
+
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime creationDate;
+    @TableField(fill = FieldFill.INSERT)
+    private Long createdBy;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime lastUpdateDate;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Long lastUpdatedBy;
+
+    private Long objectVersionNumber;
+
+    /**
+     * 状态（1:正常；0:删除）
+     */
+    private int status;
+
+}
