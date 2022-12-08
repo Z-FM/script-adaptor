@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -12,7 +13,8 @@ import java.time.LocalDateTime;
  * @Author: feiming.zhang@going-link.com.
  */
 @Data
-public abstract class BaseDomain {
+public abstract class BaseDomain implements Serializable {
+    private static final long serialVersionUID = 1L;
     public static final String FIELD_CREATION_DATE = "creationDate";
     public static final String FIELD_CREATED_BY = "createdBy";
     public static final String FIELD_LAST_UPDATE_DATE = "lastUpdateDate";

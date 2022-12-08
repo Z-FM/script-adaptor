@@ -3,6 +3,7 @@ package com.zfm.scriptadaptor.domain.entity;
 import lombok.Data;
 import org.springframework.util.CollectionUtils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,8 +13,9 @@ import java.util.stream.Collectors;
  * @Author: feiming.zhang@going-link.com.
  */
 @Data
-public class Script {
-
+public class Script implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private Long tenantId;
     private ScriptHeader scriptHeader;
     private ScriptLine scriptLine;
     private List<ScriptLine> scriptLines;

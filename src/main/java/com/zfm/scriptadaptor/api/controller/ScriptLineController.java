@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -38,11 +39,9 @@ public class ScriptLineController {
     }
 
     @PostMapping
-    public ResponseEntity<Boolean> ScriptLine(@RequestBody ScriptLine scriptLine) {
-        if (scriptLine.getScriptHeaderId() == null) {
-            return Results.error();
-        }
-        return Results.success(this.scriptLineService.save(scriptLine));
+    public ResponseEntity<ScriptLine> ScriptLine(@RequestBody @Valid ScriptLine scriptLine) {
+        this.scriptLineService.save(scriptLine);
+        return Results.success(scriptLine);
     }
 
 }

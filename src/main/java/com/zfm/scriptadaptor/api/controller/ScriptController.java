@@ -1,11 +1,14 @@
 package com.zfm.scriptadaptor.api.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zfm.scriptadaptor.app.service.ScriptService;
 import com.zfm.scriptadaptor.domain.entity.Script;
 import com.zfm.scriptadaptor.domain.utils.Results;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,13 +30,11 @@ public class ScriptController {
         return Results.success(this.scriptService.scripts());
     }
 
-//    @GetMapping("/page")
-//    public ResponseEntity<IPage<Tenant>> page(Tenant tenant, Integer pageNo, Integer pageSize) {
-//        Page<Tenant> page = new Page<>(pageNo, pageSize);
-//        return Results.success(this.tenantService.page(page, new QueryWrapper<Tenant>().lambda().
-//                like(StringUtils.isNotEmpty(tenant.getTenantName()), Tenant::getTenantName, tenant.getTenantName())
-//        ));
-//    }
+    @GetMapping("/page")
+    public ResponseEntity<IPage<Script>> page(@PathVariable Script script, Integer pageNo, Integer pageSize) {
+        Page<Script> page = new Page<>(pageNo, pageSize);
+        return Results.success(this.scriptService.page(page, script));
+    }
 //
 //    @PostMapping
 //    public ResponseEntity<Boolean> tenant(@RequestBody Tenant tenant) {

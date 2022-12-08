@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -38,8 +39,9 @@ public class TenantController {
     }
 
     @PostMapping
-    public ResponseEntity<Boolean> tenant(@RequestBody Tenant tenant) {
-        return Results.success(this.tenantService.save(tenant));
+    public ResponseEntity<Tenant> tenant(@RequestBody @Valid Tenant tenant) {
+        this.tenantService.save(tenant);
+        return Results.success(tenant);
     }
 
     @DeleteMapping

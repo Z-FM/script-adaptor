@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -40,8 +41,9 @@ public class ScriptHeaderController {
     }
 
     @PostMapping
-    public ResponseEntity<Boolean> ScriptHeader(@RequestBody ScriptHeader scriptHeader) {
-        return Results.success(this.scriptHeaderService.save(scriptHeader));
+    public ResponseEntity<ScriptHeader> ScriptHeader(@RequestBody @Valid ScriptHeader scriptHeader) {
+        this.scriptHeaderService.save(scriptHeader);
+        return Results.success(scriptHeader);
     }
 
 }
