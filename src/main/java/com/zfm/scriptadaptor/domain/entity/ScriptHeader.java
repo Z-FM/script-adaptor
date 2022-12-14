@@ -41,7 +41,7 @@ public class ScriptHeader extends BaseDomain {
     /**
      * 启用
      */
-    private String enableFlag;
+    private Integer enableFlag;
 
     /**
      * 描述

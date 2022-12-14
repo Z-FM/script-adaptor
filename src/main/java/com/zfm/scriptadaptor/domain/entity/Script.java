@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 @Data
 public class Script implements Serializable {
     private static final long serialVersionUID = 1L;
+
     private Long tenantId;
     private ScriptHeader scriptHeader;
     private ScriptLine scriptLine;
@@ -50,12 +51,16 @@ public class Script implements Serializable {
         }
 
         public Builder setScriptLines(List<ScriptLine> scriptLines) {
+            if (CollectionUtils.isEmpty(scriptLines)) {
+                return this;
+            }
             if (CollectionUtils.isEmpty(this.result.scriptLines)) {
                 this.result.scriptLines = scriptLines;
             } else {
                 scriptLines.addAll(this.result.scriptLines);
             }
             this.result.scriptLines = this.result.scriptLines.stream().distinct().collect(Collectors.toList());
+            this.setScriptLine(scriptLines.get(scriptLines.size() - 1));
             return this;
         }
 

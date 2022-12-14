@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -22,7 +23,6 @@ public class ScriptAdaptorApplicationTest {
     @Test
     public void testSelect() {
         System.out.println(("----- selectAll method test ------"));
-//        List<Tenant> userList = tenantMapper.selectList(null);
         List<Tenant> list = tenantMapper.selectList(null);
         Assertions.assertEquals(5, list.size());
         list.forEach(System.out::println);
