@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @Description: 脚本服务类.
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Service
 public class ScriptServiceImpl implements ScriptService {

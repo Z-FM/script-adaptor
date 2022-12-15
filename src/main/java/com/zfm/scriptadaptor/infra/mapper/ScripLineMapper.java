@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Mapper
 public interface ScripLineMapper extends BaseMapper<ScriptLine> {

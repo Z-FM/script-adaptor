@@ -13,7 +13,7 @@ import java.io.IOException;
 
 /**
  * @Description: 执行器，封装执行方法.
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public abstract class AbstractExecutor {
 
@@ -30,7 +30,7 @@ public abstract class AbstractExecutor {
         try {
             BufferedReader bf = new BufferedReader(new FileReader(scriptFileName));
             String s;
-            StringBuffer buffer = new StringBuffer();
+            StringBuilder buffer = new StringBuilder();
             while ((s = bf.readLine()) != null) {
                 buffer.append(s.trim());
             }
@@ -38,6 +38,10 @@ public abstract class AbstractExecutor {
         } catch (ScriptException | IOException e) {
             throw new RuntimeException(e);
         }
+        scriptActuator.bindJavaObject(extensionName, extensionObject);
+    }
+
+    public void extension(String extensionName, Object extensionObject) {
         scriptActuator.bindJavaObject(extensionName, extensionObject);
     }
 
@@ -67,7 +71,7 @@ public abstract class AbstractExecutor {
 
     /**
      * @Description: 脚本执行器.
-     * @Author: feiming.zhang@going-link.com.
+     * @Author: Z-FM.
      */
     protected static class ScriptActuator {
         protected final NashornSandbox nashornSandbox = NashornSandboxes.create();

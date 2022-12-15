@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Service
 public class TenantServiceImpl extends ServiceImpl<TenantMapper, Tenant> implements TenantService {

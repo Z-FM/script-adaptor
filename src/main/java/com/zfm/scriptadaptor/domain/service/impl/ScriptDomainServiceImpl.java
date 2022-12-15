@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Service
 public class ScriptDomainServiceImpl implements ScriptDomainService {

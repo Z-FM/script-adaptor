@@ -2,7 +2,7 @@ package com.zfm.scriptadaptor.infra.repository.impl;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public class ScriptRepositoryImpl {
 }

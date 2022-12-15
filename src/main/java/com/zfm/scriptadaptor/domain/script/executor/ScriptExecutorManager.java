@@ -4,7 +4,7 @@ import com.zfm.scriptadaptor.domain.utils.StringUtils;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public class ScriptExecutorManager {
 

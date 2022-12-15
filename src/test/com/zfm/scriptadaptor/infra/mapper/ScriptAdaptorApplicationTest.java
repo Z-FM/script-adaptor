@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @SpringBootTest
 public class ScriptAdaptorApplicationTest {

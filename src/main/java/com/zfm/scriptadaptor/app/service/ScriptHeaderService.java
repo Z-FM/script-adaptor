@@ -5,7 +5,7 @@ import com.zfm.scriptadaptor.domain.entity.ScriptHeader;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public interface ScriptHeaderService extends IService<ScriptHeader> {
 }

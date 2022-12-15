@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * @Description: 执行请求对象.
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Data
 public class ScriptExecuteDto implements Serializable {

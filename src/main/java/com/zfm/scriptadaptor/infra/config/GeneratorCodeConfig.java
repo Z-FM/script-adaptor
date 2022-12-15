@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public class GeneratorCodeConfig {
     public static String scanner(String tip) {

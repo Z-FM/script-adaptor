@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Data
 public abstract class BaseDomain implements Serializable {

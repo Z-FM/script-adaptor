@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 
 /**
  * @Description: 埋点脚本执行器.
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public class BuriedPointExecutor extends AbstractExecutor {
 

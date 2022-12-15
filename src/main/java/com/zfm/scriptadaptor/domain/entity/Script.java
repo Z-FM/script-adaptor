@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 /**
  * @Description: 脚本领域模型.
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Data
 public class Script implements Serializable {

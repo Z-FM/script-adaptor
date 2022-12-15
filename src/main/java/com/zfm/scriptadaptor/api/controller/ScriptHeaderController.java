@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * @Description: 脚本基本信息接口.
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @RestController
 @RequestMapping("/script-header")

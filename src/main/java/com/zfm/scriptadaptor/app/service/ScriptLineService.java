@@ -5,7 +5,7 @@ import com.zfm.scriptadaptor.domain.entity.ScriptLine;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public interface ScriptLineService extends IService<ScriptLine> {
 }

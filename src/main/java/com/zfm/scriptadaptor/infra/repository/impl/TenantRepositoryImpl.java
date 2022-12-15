@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Component
 public class TenantRepositoryImpl implements TenantRepository {

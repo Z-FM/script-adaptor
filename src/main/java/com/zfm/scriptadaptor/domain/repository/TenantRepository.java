@@ -7,7 +7,7 @@ import com.zfm.scriptadaptor.domain.entity.Tenant;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public interface TenantRepository {
 

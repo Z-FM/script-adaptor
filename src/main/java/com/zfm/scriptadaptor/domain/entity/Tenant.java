@@ -6,7 +6,7 @@ import lombok.Data;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Data
 @TableName("tenant")

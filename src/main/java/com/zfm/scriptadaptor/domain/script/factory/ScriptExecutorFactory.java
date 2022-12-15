@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Description: 脚本工厂.
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 @Component
 public class ScriptExecutorFactory {

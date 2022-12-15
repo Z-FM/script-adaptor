@@ -2,7 +2,7 @@ package com.zfm.scriptadaptor.infra.enums;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public enum DataSourceType {
     /**

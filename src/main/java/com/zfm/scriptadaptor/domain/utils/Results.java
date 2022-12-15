@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 
 /**
  * @Description: .
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public class Results {
     private static final ResponseEntity NO_CONTENT;

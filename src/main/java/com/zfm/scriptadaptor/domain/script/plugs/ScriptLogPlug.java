@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @Description: 脚本日志打印功能.
- * @Author: feiming.zhang@going-link.com.
+ * @Author: Z-FM.
  */
 public class ScriptLogPlug {
 
