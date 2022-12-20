@@ -1,5 +1,6 @@
 package com.zfm.scriptadaptor.domain.script.executor;
 
+import com.zfm.scriptadaptor.domain.script.plugs.DatabasePlug;
 import com.zfm.scriptadaptor.domain.utils.StringUtils;
 
 /**
@@ -14,6 +15,7 @@ public class ScriptExecutorManager {
             BuriedPointExecutor buriedPointExecutor = new BuriedPointExecutor();
             buriedPointExecutor.defineSandbox();
             buriedPointExecutor.initPlugs();
+            buriedPointExecutor.extension("common_database", new DatabasePlug());
             return buriedPointExecutor;
         }
         return null;

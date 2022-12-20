@@ -3,7 +3,6 @@ package com.zfm.scriptadaptor.domain.script.executor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.annotation.PostConstruct;
 import java.util.concurrent.Executors;
 
 /**
@@ -34,7 +33,7 @@ public class BuriedPointExecutor extends AbstractExecutor {
 
     @Override
     void initPlugs() {
-        extension("src/main/resources/script/plugs/scriptLogPlug.js", "common_log", log);
+        extension("src/main/resources/script/plugs/commonPlug.js", "common_log", log);
     }
 
     public Object executeProcess(Object... args) {

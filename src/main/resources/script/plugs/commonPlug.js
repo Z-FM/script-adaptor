@@ -1,5 +1,5 @@
 var COM = {
-    Database: {
+    LOGGER: {
         info: function () {
             switch (arguments.length) {
                 case 1:
@@ -31,6 +31,11 @@ var COM = {
                 default:
                     return common_log.error(arguments[0], arguments[1]);
             }
+        }
+    },
+    Database: {
+        selectById: function () {
+            return common_database.selectById(arguments[0], arguments[1]);
         }
     }
 }
